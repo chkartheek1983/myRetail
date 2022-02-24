@@ -1,0 +1,58 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    mame: myRetail-app-v1
+
+---
+spring:
+  config:
+    active:
+      on-profile: local
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: productdb
+prdtinfo:
+  url: http://localhost:8081/products/getProductName/
+
+---
+spring:
+  config:
+    active:
+      on-profile: dev
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: productdb
+prdtinfo:
+  url: http://localhost:8081/products/getProductName/
+
+---
+spring:
+  config:
+    active:
+      on-profile: uat
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: productdb
+prdtinfo:
+  url: http://localhost:8081/products/getProductName/
+
+---
+spring:
+  config:
+    active:
+      on-profile: prd
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: productdb
+prdtinfo:
+  url: http://localhost:8081/products/getProductName/
